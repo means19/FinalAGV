@@ -6,6 +6,7 @@ import {
   Command,
   Frame,
   GalleryVerticalEnd,
+  Home,
   Map,
   PieChart,
   Settings2,
@@ -33,34 +34,25 @@ const data = {
   },
   teams: [
     {
-      name: "Acme Inc",
+      name: "iPAC Lab",
       logo: GalleryVerticalEnd,
-      plan: "Enterprise",
+      plan: "Student",
     },
-    {
-      name: "Acme Corp.",
-      logo: AudioWaveform,
-      plan: "Startup",
-    },
-    {
-      name: "Evil Corp.",
-      logo: Command,
-      plan: "Free",
-    },
+
   ],
   navMain: [
-    {
-      title: "Playground",
+    { 
+      title: "Dashboard",
       url: "#",
-      icon: SquareTerminal,
+      icon: Home,
       isActive: true,
       items: [
         {
-          title: "History",
+          title: "AGV List",
           url: "#",
         },
         {
-          title: "Starred",
+          title: "Task Assignment",
           url: "#",
         },
         {
@@ -70,9 +62,9 @@ const data = {
       ],
     },
     {
-      title: "Models",
+      title: "Map",
       url: "#",
-      icon: Bot,
+      icon: Map,
       items: [
         {
           title: "Genesis",
@@ -125,10 +117,6 @@ const data = {
           url: "#",
         },
         {
-          title: "Billing",
-          url: "#",
-        },
-        {
           title: "Limits",
           url: "#",
         },
@@ -137,17 +125,17 @@ const data = {
   ],
   projects: [
     {
-      name: "Design Engineering",
+      name: "1",
       url: "#",
       icon: Frame,
     },
     {
-      name: "Sales & Marketing",
+      name: "2",
       url: "#",
       icon: PieChart,
     },
     {
-      name: "Travel",
+      name: "3",
       url: "#",
       icon: Map,
     },
@@ -164,9 +152,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
         <NavMain items={data.navMain} />
         <NavProjects projects={data.projects} />
       </SidebarContent>
-      <SidebarFooter>
-        <NavUser user={data.user} />
-      </SidebarFooter>
       <SidebarRail />
     </Sidebar>
   )

@@ -20,6 +20,7 @@ import {
     AlertDialogTrigger,
   } from "@/components/ui/alert-dialog";
 
+
 const AGVList = () => {
   const [agvs, setAgvs] = useState(agvData);
 
@@ -121,6 +122,7 @@ const AGVCard = ({
   );
 };
 
+
 // Card AGV hiển thị ở sidebar
 const AGVSidebarCard = ({
   agv,
@@ -139,7 +141,9 @@ const AGVSidebarCard = ({
       </CardHeader>
       <CardFooter>
         <button
-          onClick={() => onToggle(agv.id)}
+          onClick={() => {
+            onToggle(agv.id)}}
+            
           className="text-green-500 hover:text-green-700"
         >
           Connect
